@@ -1,0 +1,314 @@
+/* Import Inter font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* Root variables */
+:root {
+  --button-bg-red: #e1251b;
+  --button-bg-black: #323334;
+  --text-color: #05060f;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f9f9;
+}
+p {
+  text-wrap: wrap;
+  width: inherit;
+}
+.font-montserrat {
+  font-family: "Montserrat", sans-serif !important;
+}
+/* Styles */
+
+/* Remove bullet points from all lists */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-ul-ol ul,
+.custom-ul-ol ol {
+  list-style: block;
+  margin: 12px;
+  padding-left: 12px;
+}
+
+/* Position submenus absolutely */
+.menu-item-has-children {
+  position: relative;
+}
+
+.menu-item-has-children > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  z-index: 1000;
+}
+
+/* Show submenu on hover */
+.menu-item-has-children:hover > ul {
+  display: block;
+}
+
+/* Style submenu links */
+.menu-item-has-children > ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.menu-item-has-children > ul li a:hover {
+  background-color: #f5f5f5;
+}
+
+/* Ensure mobile menu items are properly styled */
+#mobile-menu ul li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  transition: color 0.2s ease;
+}
+
+#mobile-menu ul li a:hover {
+  color: #e1251b;
+}
+
+/* Desktop menu hover effects */
+.hidden.lg\\:flex ul li a {
+  padding: 0.5rem 0.75rem;
+  transition: color 0.2s ease;
+  border-radius: 0.25rem;
+}
+
+.hidden.lg\\:flex ul li a:hover {
+  color: #e1251b;
+}
+
+/* Tablet menu hover effects */
+.hidden.md\\:flex.lg\\:hidden ul li a {
+  padding: 0.25rem 0.5rem;
+  transition: color 0.2s ease;
+  border-radius: 0.25rem;
+}
+
+.hidden.md\\:flex.lg\\:hidden ul li a:hover {
+  color: #e1251b;
+}
+
+/* Responsive breakpoint adjustments */
+@media (max-width: 374px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 639px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 850px !important;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+.list_style_ar ol,
+.list_style_ar ul {
+  list-style: auto;
+  margin-left: 15px;
+}
+.container {
+  max-width: 1276px !important;
+}
+.custom_paragraph p{
+  width: 100%;
+}
+
+.Successful_installations img:nth-child(3) {
+  grid-column: span 2 / span 2;
+}
+/* media  */
+@media (min-width: 768px) and (max-width: 830px){
+  .tab_menu_Am{
+    font-size: 10px !important;
+  }
+
+}
+
+
+/* media gallery grid span */
+
+/* Mobile */
+.sabic_technical > img:nth-child(2) {
+  order: -1;
+}
+.gitex_global_2022 > img:nth-child(4){
+    
+    order: -1;
+  }
+.technology_and_industry > img:nth-child(2){
+    
+    order: -1;
+  }
+/* Tablet  */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .sabic_technical > img:nth-child(2) {
+    order: -1;
+     grid-column: span 2 / span 2;
+  
+  }
+  .gitex_global_2023 > img:nth-child(1),
+  .gitex_global_2023 > img:nth-child(2) {
+    grid-column: span 4 / span 4; 
+  }
+  .gitex_global_2023 img{
+    grid-column: span 2 / span 2;
+  }
+  .gitex_global_2022 > img:nth-child(4){
+    grid-column: span 4 / span 4; 
+    order: -1;
+  }
+    .gitex_global_2022 img{
+    grid-column: span 2 / span 2;
+  }
+    .technology_and_industry > img:nth-child(2) {
+    grid-column: span 4 / span 4; 
+  }
+  .technology_and_industry img{
+    grid-column: span 2 / span 2;
+  }
+  .technology_and_industry > img:nth-child(2){
+    
+    order: -1;
+  }
+}
+
+/* Desktop*/
+@media (min-width: 1024px) {
+  .sabic_technical > img:nth-child(2) {
+    grid-column: span 2 / span 2;
+    order: 0;
+  }
+  .gitex_global_2023 > img:nth-child(1),
+  .gitex_global_2023 > img:nth-child(2) {
+    grid-column: span 3 / span 3; 
+  }
+  .gitex_global_2023 img{
+    grid-column: span 2 / span 2;
+  }
+  .gitex_global_2022 > img:nth-child(4){
+    grid-column: span 4 / span 4; 
+  }
+  .gitex_global_2022 img{
+    grid-column: span 2 / span 2;
+  }
+  .technology_and_industry > img:nth-child(2) {
+    grid-column: span 4 / span 4; 
+      order: 0;
+  }
+  .technology_and_industry img{
+    grid-column: span 2 / span 2;
+   
+  }
+}
+
+
+/* contact us page form css */
+
+.contact_form .wpforms-field, .Event_registration_form .wpforms-field, .book_a_call .wpforms-field{
+padding: 10px 0px !important;
+}
+.contact_form div#wpforms-869, .Event_registration_form div#wpforms-867 {
+margin: unset !important;
+}
+label.wpforms-field-label {
+ font-family: "Roboto", sans-serif !important;
+ font-size: 14px !important;
+ font-weight: normal !important;
+ margin-bottom: 5px !important;
+}
+.wpforms-field-large{
+  border-radius: 10px !important;
+  border : 1px solid #05060F4D !important;
+}
+button#wpforms-submit-869, button#wpforms-submit-867{
+  margin-top: 40px !important;
+}
+
+button#wpforms-submit-869, button#wpforms-submit-867, button#wpforms-submit-863{
+  background-color: #323334 !important;
+  border-radius: 10px !important;
+  width: 195px !important;
+  height: 56px !important;
+  text-transform: uppercase !important;
+   font-family: "Roboto", sans-serif !important;
+   font-size: 14px !important;
+   font-weight: 867 !important;
+   letter-spacing: 1px;
+}
+button#wpforms-submit-865{
+  background-color: #e1251b!important;
+  border-radius: 10px !important;
+  width: 195px !important;
+  height: 56px !important;
+  text-transform: uppercase !important;
+   font-family: "Roboto", sans-serif !important;
+   font-size: 14px !important;
+   font-weight: 867 !important;
+   letter-spacing: 1px;
+   transition: all .3s ease-in-out;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -4px rgba(0, 0, 0, 0.1) !important;
+    
+
+}
+div#wpforms-863 {
+    overflow: scroll;
+}
+.wpforms-uploader.dz-clickable {
+    border-radius: 20px !important;
+    border: 2px dashed #00000040 !important;
+}
+.applynowform .wpforms-field-layout-rows.wpforms-field-large{
+  border: unset !important;
+  border-radius: unset !important;
+}
+.applynowform div#wpforms-863-field_5-container {
+    height: 100% !important;
+}
+.applynowform .wpforms-uploader.dz-clickable {
+    height: 100%;
+}
+div#wpforms-863-field_10-container{
+
+border: unset !important;
+border-radius: unset !important;
+
+}
+div#wpforms-865, div#wpforms-863{
+  margin-top: unset !important;
+  margin-bottom: 32px !important;
+}
+@media(max-width:768px){
+  button#wpforms-submit-869, button#wpforms-submit-867{
+  margin: 20px 0px !important;
+}
+
+.applynowform .book_a_call{
+      overflow: scroll;
+    height: 96vh;
+}
+div#popupOverlayapplynow {
+    padding: 14px 0px;
+}
+}
