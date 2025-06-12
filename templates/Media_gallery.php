@@ -17,11 +17,15 @@ $technology_and_industry = $gallery_field['technology_and_industry'];
   <section class="pb-[50px] md:pb-[140px]">
     <div class="container mx-auto px-4">
       <?php if (!empty($Media_Heading)) : ?>
-        <div class="flex items-center gap-[32px] mb-[40px] mt-[10px]">
-          <img src="http://localhost/motabqah/wp-content/uploads/2025/06/back.png" width="24">
-          <h1 class="uppercase text-[25px] md:text-[40px] font-bold tracking-[3px] md:tracking-[4.8px]">
-            <?php echo esc_html($Media_Heading); ?>
-          </h1>
+        <div class="flex items-center gap-[32px] mb-[40px] mt-[16px]">
+                <a class="contents" href="javascript:history.back()">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/back.png" width="24" alt="Back" />
+
+                    <h1
+                        class="font-montserrat uppercase text-[25px] md:text-[40px] font-bold tracking-[3px] md:leading-[48px] md:tracking-[4.8px]">
+                        <?php the_title(); ?>
+                    </h1>
+                </a>
         </div>
       <?php endif; ?>
 
@@ -33,17 +37,17 @@ $technology_and_industry = $gallery_field['technology_and_industry'];
         ?>
 
         <?php if (!empty($sabic_heading)) : ?>
-          <h1 class="uppercase text-[20px] md:text-[32px] font-bold leading-[24px] md:leading-[40px] tracking-[3.8px] mb-[24px]">
+          <h1 class="font-montserrat uppercase text-[20px] md:text-[32px] md:w-[486px] font-bold leading-[24px] md:leading-[40px] tracking-[3.8px] mb-[24px]">
             <?php echo esc_html($sabic_heading); ?>
           </h1>
         <?php endif; ?>
 
         <?php if (!empty($sabic_description)) : ?>
-          <p class="roboto [14px] text-[#000000] mb-[40px]"><?php echo esc_html($sabic_description); ?></p>
+          <p class="roboto text-[14px] text-[#000000] mb-[40px] md:w-[486px]"><?php echo esc_html($sabic_description); ?></p>
         <?php endif; ?>
 
         <?php if (!empty($sabic_images)) : ?>
-          <div class="sabic_technical gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[18px] gap-y-[13px]">
+          <div class="sabic_technical gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[20px] gap-y-[13px]">
             <?php foreach ($sabic_images as $images) :
               $image = $images['image'];
               if (!empty($image['url'])) :
@@ -66,17 +70,17 @@ $technology_and_industry = $gallery_field['technology_and_industry'];
     <div class="container mx-auto px-4">
       <div class="Gallery_images">
         <?php if (!empty($heading)) : ?>
-          <h1 class="uppercase text-[20px] md:text-[32px] font-bold leading-[24px] md:leading-[40px] tracking-[3.8px] mb-[24px]">
+          <h1 class="font-montserrat uppercase text-[20px] md:text-[32px] md:w-[486px] font-bold leading-[24px] md:leading-[40px] tracking-[3.8px] mb-[24px]">
             <?php echo esc_html($heading); ?>
           </h1>
         <?php endif; ?>
 
         <?php if (!empty($description)) : ?>
-          <p class="roboto [14px] text-[#000000] mb-[40px]"><?php echo esc_html($description); ?></p>
+          <p class="roboto text-[14px] leading-[20px] text-[#000000] md:w-[486px] mb-[40px]"><?php echo esc_html($description); ?></p>
         <?php endif; ?>
 
         <?php if (!empty($images)) : ?>
-          <div class="gitex_global_2023 gallery grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-x-[18px] gap-y-[13px]">
+          <div class="gitex_global_2023 gallery grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-x-[20px] gap-y-[13px]">
             <?php foreach ($images as $img) :
               $image = $img['image'];
               if (!empty($image['url'])) :
@@ -99,17 +103,17 @@ $technology_and_industry = $gallery_field['technology_and_industry'];
     <div class="container mx-auto px-4">
       <div class="Gallery_images">
         <?php if (!empty($heading)) : ?>
-          <h1 class="uppercase text-[20px] md:text-[32px] font-bold leading-[24px] md:leading-[40px] tracking-[3.8px] mb-[24px]">
+          <h1 class="font-montserrat uppercase text-[20px] md:text-[32px] md:w-[486px] font-bold leading-[24px] md:leading-[40px] tracking-[3.8px] mb-[24px]">
             <?php echo esc_html($heading); ?>
           </h1>
         <?php endif; ?>
 
         <?php if (!empty($description)) : ?>
-          <p class="roboto [14px] text-[#000000] mb-[40px]"><?php echo esc_html($description); ?></p>
+          <p class="roboto text-[14px] text-[#000000] md:w-[486px] mb-[40px]"><?php echo esc_html($description); ?></p>
         <?php endif; ?>
 
         <?php if (!empty($images)) : ?>
-          <div class="gitex_global_2022 gallery grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-x-[18px] gap-y-[13px]">
+          <div class="gitex_global_2022 gallery grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-x-[20px] gap-y-[13px]">
             <?php foreach ($images as $img) :
               $image = $img['image'];
               if (!empty($image['url'])) :
@@ -132,17 +136,17 @@ $technology_and_industry = $gallery_field['technology_and_industry'];
     <div class="container mx-auto px-4">
       <div class="Gallery_images">
         <?php if (!empty($heading)) : ?>
-          <h1 class="uppercase text-[20px] md:text-[32px] font-bold leading-[24px] md:leading-[40px] tracking-[3.8px] mb-[24px]">
+          <h1 class="font-montserrat uppercase text-[20px] md:w-[486px] md:text-[32px] font-bold leading-[24px] md:leading-[40px] tracking-[3.8px] mb-[24px]">
             <?php echo esc_html($heading); ?>
           </h1>
         <?php endif; ?>
 
         <?php if (!empty($description)) : ?>
-          <p class="roboto [14px] text-[#000000] mb-[40px]"><?php echo esc_html($description); ?></p>
+          <p class="roboto text-[14px] text-[#000000] md:w-[486px] mb-[40px]"><?php echo esc_html($description); ?></p>
         <?php endif; ?>
 
         <?php if (!empty($images)) : ?>
-          <div class="technology_and_industry gallery grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-x-[18px] gap-y-[13px]">
+          <div class="technology_and_industry gallery grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-x-[20px] gap-y-[13px]">
             <?php foreach ($images as $img) :
               $image = $img['image'];
               if (!empty($image['url'])) :

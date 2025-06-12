@@ -21,13 +21,13 @@ if (get_field('telecom_services_section')) {
 
     ?>
     <section class="bg-[#F8F8F8]">
-        <div class="container mx-auto px-4 pb-[40px]">
-            <div class="flex items-center gap-[15px] md:gap-[32px] mb-[40px] mt-[10px]">
+        <div class="container mx-auto px-4 pb-[53px]">
+            <div class="flex items-center gap-0 sm:gap-[15px] md:gap-[32px] mb-[40px] mt-[16px] md:leading-[48px]">
                 <a class="contents" href="javascript:history.back()">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/back.png" width="24" alt="Back" />
 
                     <h1
-                        class="font-montserrat uppercase text-[25px] md:text-[40px] font-bold tracking-[3px] md:tracking-[4.8px]">
+                        class="font-montserrat uppercase text-[25px] md:text-[40px] font-bold tracking-[1px] sm:tracking-[3px] md:tracking-[4.8px]">
                         <?php the_title(); ?>
                     </h1>
                 </a>
@@ -38,7 +38,7 @@ if (get_field('telecom_services_section')) {
                         class="font-montserrat max-w-2xl uppercase text-[#05060F] text-[20px] md:text-[32px] leading-[20px] md:leading-[40px] font-bold tracking-[3.8px] mb-[24px]">
                         <?php echo $section_heading; ?>
                     </h1>
-                    <div class="max-w-2xl roboto [14px] text-[#05060F]">
+                    <div class="max-w-2xl roboto text-[14px] leading-[20px] md:leading-[20px] text-[#05060F]">
                         <?php echo $section_description; ?>
                     </div>
                 </div>
@@ -56,11 +56,11 @@ if (get_field('telecom_services_section')) {
                         ?>
                         <div class="used">
                             <?php if ($image): ?>
-                                <img src="<?php echo $image; ?>" alt="<?php echo $heading; ?>" height="288"
-                                    class="rounded-t-[20px] object-cover w-full" />
+                                <img src="<?php echo $image; ?>" alt="<?php echo $heading; ?>" 
+                                    class="rounded-t-[20px] object-cover w-full h-[288px]" />
                             <?php endif; ?>
                             <div
-                                class="bg-white rounded-[20px] px-[10px] md:px-[32px] py-[20px] md:py-[40px] flex flex-col justify-center items-start">
+                                class="bg-white rounded-b-[20px] px-[10px] md:px-[32px] py-[20px] md:py-[40px] flex flex-col md:h-[430px] justify-center items-start">
                                 <?php if ($heading): ?>
                                     <h1
                                         class="uppercase text-left roboto text-[20px] md:text-[24px] leading-[32px] font-bold tracking-[1px] mb-[20px]">
@@ -68,7 +68,7 @@ if (get_field('telecom_services_section')) {
                                     </h1>
                                 <?php endif; ?>
                                 <?php if ($description): ?>
-                                    <div class="roboto custom-ul-ol text-[14px] text-[#05060F] mb-[12px] list-disc list-inside">
+                                    <div class="roboto custom-ul-ol text-[14px] text-[#05060F]  list-disc list-inside">
                                         <?php echo wp_kses_post($description); ?>
                                     </div>
                                 <?php endif; ?>
@@ -97,28 +97,30 @@ if (get_field('solution_for_4g5g')) {
     <section class="bg-[#F8F8F8] pb-[50px] md:pb-[140px]">
         <div class="container mx-auto px-4">
             <h1
-                class="uppercase text-[#05060F] text-[20px] w-[100%] lg:w-[858px] md:text-[32px] leading-[20px] md:leading-[40px] font-bold tracking-[3.8px] mb-[24px]">
+                class="uppercase font-montserrat text-[#05060F] text-[20px] w-[100%] lg:w-[858px] md:text-[32px] leading-[20px] md:leading-[40px] font-bold tracking-[3.8px] mb-[24px]">
                 <?php echo $section_heading; ?>
             </h1>
 
-            <div class="grid lg:grid-cols-3 gap-[20px] mb-[32px]">
-                <div class="roboto text-[14px] text-[#000000] font-normal text-black tracking-[0.84px]">
+            <div class="grid lg:grid-cols-3 gap-[20px] mb-[20px]">
+                <div class="roboto text-[14px] leading-[20px] text-[#000000] font-normal text-black tracking-[0.84px]">
                     <?php echo $section_description; ?>
                 </div>
-                <img src="<?php echo $center_image; ?>" class="rounded-[20px] mx-auto h-[360px] w-full object-cover" />
+                <div class="communication_overlay relative" >
+                <img src="<?php echo $center_image; ?>" class="rounded-[20px] mx-auto h-[338px] w-full object-cover" />
+                </div>
                 <?php if ($features) { ?>
-                    <div class="equipment py-[46px] px-[36px] bg-white rounded-[20px]">
+                    <div class="equipment p-[30px] p-[24px] lg:p-[40px] bg-white rounded-[20px] flex flex-col gap-[15px] md:gap-[30px]">
                         <?php foreach ($features as $feature) {
                             $title = $feature['feature_title'];
                             $text = $feature['feature_text'];
                             ?>
-                            <div class="flex flex-row gap-[5px] md:gap-[70px] mb-[30px]">
+                            <div class="flex flex-row gap-[5px] md:gap-[70px]">
                                 <p
-                                    class="roboto text-[14px] w-[120px] md:w-[79px] text-[#05060F] font-normal text-black tracking-[0.84px]">
+                                    class="roboto text-[14px] leading-[20px] w-[120px] md:w-[79px] text-[#05060F] font-normal text-black tracking-[0.84px]">
                                     <?php echo $title; ?>
                                 </p>
                                 <div class="flex flex-col gap-[8px]">
-                                    <div class="roboto text-[14px] text-[#000000] font-normal text-black tracking-[0.84px]">
+                                    <div class="roboto text-[14px] leading-[20px] text-[#000000] font-normal text-black tracking-[0.84px]">
                                         <?php echo $text; ?>
                                     </div>
                                 </div>
@@ -128,14 +130,16 @@ if (get_field('solution_for_4g5g')) {
                 <?php } ?>
             </div>
             <div class="grid lg:grid-cols-3 gap-[20px] h-[324]">
-                <img src="<?php echo $bottom_left_image; ?>" class="w-full h-[324] object-cover rounded-[20px]" />
+                <div class="integration_solutionoverlay relative col-span-2 md:col-span-1  " >
+                <img src="<?php echo $bottom_left_image; ?>" class="w-full h-[252px] object-cover rounded-[20px]" />
+                </div>
                 <div
                     class="bg-white rounded-[20px] px-[10px] md:px-[32px] flex flex-col justify-center items-start col-span-2">
                     <h1
-                        class="uppercase text-left roboto text-[20px] md:text-[24px] leading-[32px] font-bold tracking-[1px] mb-[20px]">
+                        class="uppercase text-left roboto text-[20px] md:text-[24px] leading-[32px] font-bold tracking-[1px] mb-[8px]">
                         <?php echo $integrated_sol_title; ?>
                     </h1>
-                    <div class="roboto custom-ul-ol text-[14px] text-[#05060F] mb-[12px] list-disc list-inside">
+                    <div class="roboto custom-ul-ol text-[14px] text-[#05060F]  list-disc list-inside">
                         <?php echo wp_kses_post($integrated_sol_description); ?>
                     </div>
                 </div>
@@ -156,12 +160,12 @@ if (get_field('product_brochures_section')) {
     <section class="bg-[#F8F8F8] pb-[70px]">
         <div class="container mx-auto px-4">
             <h1
-                class="uppercase w-full lg:w-[560px] text-[#05060F] text-[20px] md:text-[32px] leading-[20px] md:leading-[40px] font-bold tracking-[3.8px] mb-[24px]">
+                class="uppercase w-full font-montserrat lg:w-[560px] text-[#05060F] text-[20px] md:text-[32px] leading-[20px] md:leading-[40px] font-bold tracking-[3.8px] mb-[24px]">
                 <?php echo $section_heading; ?>
             </h1>
-            <div class="grid lg:grid-cols-2 gap-[20px] mb-[20px]">
+            <div class="grid lg:grid-cols-2 gap-[20px]">
                 <div class="rounded-[20px] flex flex-col justify-center items-start">
-                    <div class="roboto text-[14px] text-[#000000] font-normal text-black tracking-[0.84px]">
+                    <div class="roboto text-[14px] leading-[20px] text-[#000000] font-normal text-black tracking-[0.84px] ">
                         <?php echo $section_description; ?>
                     </div>
 
@@ -177,7 +181,7 @@ if (get_field('product_brochures_section')) {
                         </div>
                     <?php endif; ?>
                 </div>
-                <img src="<?php echo $image; ?>" class="w-full h-[230px] rounded-[20px] object-cover" />
+                <img src="<?php echo $image; ?>" class="w-full h-[218px] rounded-[20px] object-cover" />
             </div>
         </div>
     </section>

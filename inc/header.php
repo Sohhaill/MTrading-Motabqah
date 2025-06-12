@@ -1,5 +1,5 @@
 <header class="bg-[#F9F9F9] relative z-50">
-  <div class="container mx-auto px-4 sm:px-5  py-4 sm:py-5 flex items-center justify-between">
+  <div class="container mx-auto px-4 sm:px-5 pb-5 pt-4 sm:pt-5 sm:pb-7 flex items-center justify-between">
 
     <!-- Logo -->
     <div class="flex items-center gap-2 sm:gap-4 h-8 w-24 sm:h-10 sm:w-28 md:h-12 md:w-32 flex-shrink-0">

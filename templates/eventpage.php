@@ -12,9 +12,9 @@ get_header();
 
 <section class="bg-[#F8F8F8]">
     <div class="container mx-auto px-4">
-        <div class="flex items-center gap-[32px] mb-6 mt-4">
+        <div class="flex items-center gap-[32px] mb-[30px] md:mb-[70px] mt-4">
             <h1
-                class="font-montserrat uppercase text-[25px] md:text-[40px] font-bold tracking-[3px] md:tracking-[4.8px]">
+                class="font-montserrat uppercase text-[25px] md:text-[40px] md:leading-[48px] font-bold tracking-[3px] md:tracking-[4.8px]">
                 <?php the_title(); ?>
             </h1>
         </div>
@@ -38,8 +38,8 @@ get_header();
                     $product_query->the_post(); ?>
 
                     <div class="events bg-white rounded-[20px] flex flex-col md:flex-row">
-                        <div class="text py-[25px] px-[10] md:py-[45px] md:px-[32px] w-[100%] md:w-[55%]">
-                            <h1 class="uppercase text-[20px] md:text-[24px] font-bold tracking-[1.2px] mb-[16px]">
+                        <div class="text py-[25px] !px-[15px] md:py-[55.5px] md:px-[36px] w-[100%] md:w-[55%]">
+                            <h1 class="uppercase text-[20px] md:text-[24px] font-bold tracking-[1.2px] md:leading-[32px] mb-[16px]">
                                 <?php the_title(); ?>
                             </h1>
                             <div class="text-[14px] text-[#05060F] leading-[20px] font-normal tracking-[0.84px]">
@@ -47,13 +47,13 @@ get_header();
                             </div>
                             <a href="<?php the_permalink(); ?>">
                                 <button type="button"
-                                    class="roboto mt-[10px] md:mt-[40px] w-[130px] md:w-[195px] md:h-[56px] py-[16px] bg-[#323334] rounded-[10px] uppercase text-[14px] text-white font-bold tracking-[1.2px] shadow-lg">
+                                    class="roboto mt-[10px] md:mt-[20px] w-[130px] md:w-[195px] md:h-[56px] py-[16px] bg-[#323334] rounded-[10px] uppercase text-[14px] text-white font-bold tracking-[1.2px] shadow-lg">
                                     learn more
                                 </button>
                             </a>
                         </div>
                         <?php if (has_post_thumbnail()): ?>
-                            <div class="w-[100%] md:w-[45%] rounded-r-[20px] overflow-hidden">
+                            <div class="w-[100%] md:w-[45%] rounded-r-[20px] overflow-hidden relative eventallpage_overlay">
                                 <?php the_post_thumbnail('full', ['class' => 'w-full h-full object-cover']); ?>
                             </div>
                         <?php endif; ?>

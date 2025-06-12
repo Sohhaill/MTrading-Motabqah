@@ -13,7 +13,7 @@
 
 <!--Heading Section Start-->
 <div class="lg:w-full w-full flex pt-4 justify-center bg-[#f9f9f9]">
-    <div class="container">
+    <div class="container mx-auto px-4 sm:px-5  mx-auto px-4 sm:px-5">
         <h1
             class="text-[#05060F] body lg:text-[40px] font-montserrat text-[35px] leading-[3rem] font-bold uppercase tracking-[4.8px]">
             <?php the_title(); ?>
@@ -35,19 +35,19 @@ if (get_field('hero_section')) {
 ?>
 
     <div class="w-full flex justify-center lg:pt-[70px] pt-[35px] pb-[20px] bg-[#f9f9f9]">
-        <div class="container w-full flex flex-col gap-[24px]">
+        <div class="container mx-auto px-4 sm:px-5  w-full flex flex-col gap-[24px]">
             <h1
-                class="text-[#05060F] body lg:text-[32px] font-montserrat text-[28px] max-w-[538px]  leading-[40px] font-bold uppercase tracking-[4.8px]">
+                class="text-[#05060F] body lg:text-[32px] font-montserrat text-[28px] max-w-[588px]  leading-[40px] font-bold uppercase tracking-[4.8px]">
                 <?php echo $section_heading; ?>
             </h1>
 
             <div class="w-full pt-1 gap-5 flex lg:flex-row flex-col justify-between">
-                <div class="flex flex-col gap-4 lg:max-w-[629px] rob leading-5 text-sm text-[#05060F] tracking-[0.84px]">
+                <div class="flex flex-col gap-4 lg:w-[50%] rob leading-5 text-sm text-[#05060F] tracking-[0.84px] Industries_overviewP">
                     <?php echo $section_description; ?>
                 </div>
-                <div class="flex md:flex-row flex-col  gap-5 md:min-w-[429px] ">
-                    <img src="<?php echo $hero_image_1; ?>" class="md:w-[50%] h-[400px] rounded-[20px]  md:h-[273px] object-cover" />
-                    <img src="<?php echo $hero_image_2; ?>" class="md:w-[50%] h-[400px] rounded-[20px] md:h-[273px] object-cover" />
+                <div class="flex md:flex-row flex-col  gap-5 lg:w-[50%] ">
+                    <img src="<?php echo $hero_image_1; ?>" class="md:w-[50%] h-[400px] rounded-[20px] md:h-[276px] object-cover" />
+                    <img src="<?php echo $hero_image_2; ?>" class="md:w-[50%] h-[400px] rounded-[20px]  md:h-[276px] object-cover" />
                 </div>
             </div>
         </div>
@@ -66,7 +66,7 @@ if (get_field('features_and_optimization_sections')) {
 
 ?>
 
-    <div class="flex container mx-auto justify-center lg:pb-[70px] pb-[35px] lg:flex-row flex-col gap-[20px]">
+    <div class="flex container mx-auto px-4 sm:px-5  mx-auto justify-center lg:pb-[70px] pb-[35px] lg:flex-row flex-col gap-[20px]">
         <div
             class="bg-white rounded-[20px] lg:w-[412px] md:h-[354px] flex flex-col  md:px-[36px] px-[15px] py-[25px] md:pt-[46px] gap-[30px]">
             <?php
@@ -88,7 +88,7 @@ if (get_field('features_and_optimization_sections')) {
                         <ul class="w-[50%]">
                             <?php
                             foreach ($property_list as $property) {
-                                echo "<li class='rob leading-5 text-sm list-none text-[#05060F] tracking-[0.84px]'>" . $property['listing_title'] . "</li>";
+                                echo "<li class='rob leading-5 text-sm list-none text-[#05060F] tracking-[0.84px] mb-[6px]'>" . $property['listing_title'] . "</li>";
                             }
                             ?>
                         </ul>
@@ -101,8 +101,9 @@ if (get_field('features_and_optimization_sections')) {
             }
             ?>
         </div>
-
-        <img src="<?php echo $section_image; ?>" class="lg:w-[calc(100%-412px)] lg:h-[354px] h-[300px] rounded-[20px]  md:h-[380px] object-cover" />
+<div class="industry_overlay lg:w-[calc(100%-412px)] lg:h-[354px] relative">
+        <img src="<?php echo $section_image; ?>" class="h-[300px] rounded-[20px]  md:h-[354px] object-cover w-full" />
+    </div>
     </div>
 <?php
 }
@@ -118,9 +119,9 @@ if (get_field('features_and_optimization_sections')) {
 ?>
 
     <div class="w-full flex justify-center lg:py-[70px] py-[35px]  bg-[#f9f9f9]">
-        <div class="flex flex-col container">
+        <div class="flex flex-col container mx-auto px-4 sm:px-5 ">
             <h1
-                class="text-[#05060F] body lg:text-[32px] text-[28px] max-w-[560px] leading-[40px] font-bold uppercase tracking-[4.8px]">
+                class="font-montserrat text-[#05060F] body lg:text-[32px] text-[28px] max-w-[560px] leading-[40px] font-bold uppercase tracking-[4.8px]">
                 <?php echo $section_title; ?>
             </h1>
             <div class="rob leading-5 text-sm text-[#05060F] tracking-[0.84px] md:w-[560px] pt-6">
@@ -140,7 +141,7 @@ if (get_field('features_and_optimization_sections')) {
                             <div
                                 class="bg-white rounded-bl-[20px] rounded-br-[20px] md:py-[40px] md:px-[32px] px-[15px] py-[25px]">
                                 <h3
-                                    class="text-[#05060F] font-bold text-xl tracking-[1.6px] uppercase">
+                                    class="text-[#05060F] font-bold text-[24px] md:leading-[32px] tracking-[1.6px] uppercase">
                                     <?php echo $section_title; ?>
                                 </h3>
                                 <?php
@@ -150,7 +151,7 @@ if (get_field('features_and_optimization_sections')) {
                                         $details_descriptions = $section_details['details_descriptions'];
                                 ?>
                                         <p
-                                            class="rob leading-5 text-sm text-[#05060F] tracking-[0.84px] pt-6 w-100">
+                                            class="rob leading-5 text-sm text-[#05060F] tracking-[0.84px] pt-[16px] w-100">
                                             <?php echo $index + 1 . ". " . $details_title; ?>
                                         </p>
                                         <div
@@ -183,13 +184,13 @@ if (get_field('case_studies_section')) {
 ?>
 
     <div class="w-full flex justify-center lg:py-[70px] py-[35px] bg-[#f9f9f9]">
-        <div class="flex flex-col container">
+        <div class="flex flex-col container mx-auto px-4 sm:px-5 ">
             <h2
-                class="text-[#05060F] body lg:text-[32px] text-[28px] leading-[40px] font-bold uppercase tracking-[4.8px]">
+                class="text-[#05060F] body lg:text-[32px] text-[28px] leading-[40px] font-montserrat font-bold uppercase tracking-[4.8px]">
                 <?php echo $section_title; ?>
             </h2>
             <div
-                class="rob leading-5 text-sm text-[#05060F] tracking-[0.84px] md:w-[672px] pt-5 w-100">
+                class="rob leading-5 text-sm text-[#05060F] tracking-[0.84px] md:w-[672px] pt-[40px] w-100">
                 <?php echo $section_description; ?>
             </div>
 
@@ -201,11 +202,11 @@ if (get_field('case_studies_section')) {
                     $case_studies_image = $case_studies['case_study_image'];
             ?>
 
-                    <div class="flex lg:flex-row flex-col pt-[40px] ">
+                    <div class="flex lg:flex-row flex-col pt-[20px] ">
                         <div
                             class="bg-white md:min-w-[500px] lg:rounded-bl-[20px] lg:rounded-br-[0px] lg:rounded-tl-[20px] lg:rounded-tr-[0px] rounded-tl-[20px] rounded-tr-[20px] md:py-[40px] px-[15px] py-[25px] md:px-[32px] lg:w-[55%]">
                             <h3
-                                class="text-[#05060F] font-bold text-xl tracking-[1.6px] uppercase">
+                                class="text-[#05060F] font-bold tracking-[1.6px] uppercase text-[24px] md:leading-[32px] mb-[6px]">
                                 <?php echo $case_studies_title; ?>
                             </h3>
                             <?php
@@ -214,7 +215,7 @@ if (get_field('case_studies_section')) {
                                     $property_title = $property['property_name'];
                                     $property_list = $property['property_description'];
                             ?>
-                                    <div class="flex flex-row gap-[30px] pt-[20px]">
+                                    <div class="flex flex-row gap-[30px] pt-[12px]">
                                         <div class="w-[70px] min-w-[69px]">
                                             <p
                                                 class="w-full rob leading-5 text-sm text-[#05060F] tracking-[0.84px]">

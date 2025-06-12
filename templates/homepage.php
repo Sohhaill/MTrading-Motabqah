@@ -22,12 +22,12 @@ if (get_field('hero_section')) {
 
 ?>
 <section class="bg-[#F9F9F9]">
-    <div class="container mx-auto px-4 sm:px-5 lg:px-6 py-6 sm:py-10">
-        <div class="relative rounded-[20px] overflow-hidden">
+    <div class="container mx-auto px-4 sm:px-5 lg:px-6 pb-3 sm:pb-5">
+        <div class="relative rounded-[20px] overflow-hidden homebanner_overlay">
             <img src="<?php echo  $image; ?>" alt="Team Presentation"
                 class="w-full h-[300px] sm:h-[400px] md:h-[485px] object-cover">
 
-            <div class="absolute inset-0 bg-black bg-opacity-50 px-6 sm:px-10 md:px-20 py-10 md:pt-24">
+            <div class="absolute inset-0 bg-black bg-opacity-50 px-6 sm:px-10 md:px-20 py-10 md:pt-24 !z-10">
                 <h1
                     class="font-montserrat text-white text-xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold md:!leading-[48px] uppercase tracking-widest mb-4 sm:mb-6 max-w-3xl">
                     <?php echo  $heading; ?>
@@ -58,7 +58,7 @@ if (get_field('what_we_do_section')) {
 
 ?>
 <section class="bg-[#F9F9F9]">
-    <div class="container mx-auto px-4 sm:px-5 lg:px-6 py-10 md:py-[50px]">
+    <div class="container mx-auto px-4 sm:px-5 lg:px-6 py-10 md:py-[70px]">
         <div class="flex flex-col md:flex-row gap-10 md:gap-12 items-center">
             <!-- Left Text Column (40%) -->
             <div class="w-full md:w-[44%]">
@@ -72,7 +72,7 @@ if (get_field('what_we_do_section')) {
             </div>
 
             <!-- Right Image + Play Button (60%) -->
-            <div class="relative w-full md:w-[56%] rounded-[20px] aspect-video">
+            <div class="relative w-full md:w-[56%] rounded-[20px] aspect-video home_videosec">
                 <img src="<?php echo $image; ?>" alt="Team Working"
                     class="w-full h-full object-cover rounded-[20px]">
 
@@ -102,7 +102,7 @@ if (get_field('what_we_do_section')) {
     <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
         <div class="relative w-[90%] max-w-3xl aspect-video">
             <div id="video-container" class="w-full h-full rounded-lg overflow-hidden"></div>
-            <button id="close-video" class="absolute top-2 right-4 text-white text-3xl font-bold">&times;</button>
+            <button id="close-video" class="absolute top-[-25px] right-0 text-white text-3xl font-bold">&times;</button>
         </div>
     </div>
 
@@ -117,7 +117,7 @@ if (get_field('key_offering_section')) {
     $cards = $key_offering_section['key_offering_content'];
 
 ?>
-<section class="bg-[#F8F8F8] py-16">
+<section class="bg-[#F8F8F8] py-10 md:py-[70px]">
     <div class="container mx-auto px-4 sm:px-5 lg:px-6">
         <!-- Section Heading -->
         <?php if ($heading): ?>
@@ -156,14 +156,14 @@ if (get_field('key_offering_section')) {
 
 <!-- featured product and solution section  -->
 
-<section class="bg-[#F8F8F8] py-16">
+<section class="bg-[#F8F8F8] py-10 md:py-[70px]">
     <div class="container mx-auto px-4 sm:px-5 lg:px-6">
         <h2
             class="font-montserrat max-w-md font-bold text-2xl sm:text-[32px] md:text-[32px] leading-tight uppercase tracking-widest text-[#05060F] mb-6">
             <?php echo get_field("featured_products_and_solutions_heading"); ?>
         </h2>
 
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div class="grid gap-[20px] md:grid-cols-2 lg:grid-cols-4 homepage_gridtab">
             <?php
             $args = array(
                 'post_type' => 'product-and-solution',
@@ -179,7 +179,7 @@ if (get_field('key_offering_section')) {
                     $image_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
                     $excerpt = get_the_excerpt(); // or use a custom field
                     ?>
-                    <div class="overflow-hidden flex flex-col">
+                    <div class="overflow-hidden flex flex-col relative home_featureproduct">
                         <?php if ($image_url): ?>
                             <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>"
                                 class="mb-8 rounded-xl shadow-md h-[265px] w-full object-cover object-center" />
@@ -187,7 +187,7 @@ if (get_field('key_offering_section')) {
 
                         <div class="flex flex-col flex-grow">
                             <h3 class="text-2xl font-bold uppercase mb-4 tracking-wider"><?php the_title(); ?></h3>
-                            <div class="text-sm text-[#05060F] h-[140px] leading-[20px] tracking-wider mb-6">
+                            <div class="text-sm text-[#05060F] h-[140px] leading-[20px] tracking-wider lg:mb-6">
                                 <?php echo esc_html(wp_trim_words($excerpt, 30)); ?>
                             </div>
                             <a href="<?php the_permalink(); ?>"
@@ -217,7 +217,7 @@ if (get_field('industries_served_section')) {
     $cards = $industries_served_section['industries_served_cards'];
 
 ?>
-<section class="bg-[#F8F8F8] py-16">
+<section class="bg-[#F8F8F8] py-10 md:py-[70px]">
     <div class="container mx-auto px-4">
         <?php if ($heading): ?>
             <h2
@@ -250,14 +250,14 @@ if (get_field('industries_served_section')) {
 
 <!-- news and events section  -->
 
-<section class="bg-[#F8F8F8] py-16">
+<section class="bg-[#F8F8F8] py-10 md:py-[70px]">
     <div class="container mx-auto px-4">
         <h2
             class="font-montserrat font-bold text-2xl sm:text-[32px] md:text-[32px] leading-tight uppercase tracking-widest text-[#05060F] mb-6">
-            <?php echo esc_html(get_field("featured_products_and_solutions_heading")); ?>
+            <?php echo esc_html(get_field("news_and_events_section_heading")); ?>
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px]">
             <?php
             $args = array(
                 'post_type' => 'post',
@@ -274,9 +274,9 @@ if (get_field('industries_served_section')) {
                     $excerpt = get_the_excerpt(); // or use a custom field
                     ?>
                     <!-- Card -->
-                    <div class="bg-white rounded-[20px] shadow-[0px_4px_4px_0px_#ECECEC40] overflow-hidden">
+                    <div class="bg-white rounded-[20px] shadow-[0px_4px_4px_0px_#ECECEC40] overflow-hidden news_event_homesh relative">
                         <?php if ($image_url): ?>
-                            <a href="<?php the_permalink(); ?>"> <img src="<?php echo esc_url($image_url); ?>"
+                            <a class="news_overlay" href="<?php the_permalink(); ?>"> <img src="<?php echo esc_url($image_url); ?>"
                                     alt="<?php the_title_attribute(); ?>" class="w-full h-64 object-cover"></a>
                         <?php endif; ?>
                         <div class="p-8">

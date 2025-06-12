@@ -16,7 +16,7 @@
     <div class="container mx-auto px-4">
         <?php if (!empty($solution_page_heading)): ?>
             <h1
-                class="font-montserrat uppercase text-[#05060F] text-[30px] md:text-[40px] font-bold tracking-[4.8px] mt-[10px] mb-[40px]">
+                class="font-montserrat uppercase text-[#05060F] text-[30px] md:text-[40px] md:leading-[48px] font-bold tracking-[4.8px] mt-[16px] mb-[40px]">
                 <?php the_title(); ?>
             </h1>
         <?php endif; ?>
@@ -29,7 +29,7 @@
         if ($solution_categories):
             ?>
             <div class="about_us">
-                <div class="mb-[24px] w-[100%] md:w-[717px]">
+                <div class="mb-[40px] w-[100%] md:w-[717px]">
                     <?php if (!empty($solution_categories_heading)): ?>
                         <h1
                             class="font-montserrat uppercase text-[#05060F] text-[20px] md:text-[32px] leading-[20px] md:leading-[40px] font-bold tracking-[3.8px] mb-[24px]">
@@ -37,7 +37,7 @@
                         </h1>
                     <?php endif; ?>
                     <?php if (!empty($solution_categories_description)): ?>
-                        <p class="roboto [14px] text-[#05060F]">
+                        <p class="roboto text-[14px] text-[#05060F] leading-[20px] md:w-[477px]">
                             <?php echo esc_html($solution_categories_description); ?>
                         </p>
                     <?php endif; ?>
@@ -45,7 +45,7 @@
                 <?php if($solution_categories_category){ ?>
                 <div class="grid !grid-cols-1 lg:!grid-cols-3 gap-[20px] md:!grid-cols-2">
                     <?php foreach ($solution_categories_category as $category): ?>
-                        <div class="bg-white rounded-[20px] px-[26px] h-[257px] flex flex-col justify-center items-center">
+                        <div class="bg-white rounded-[20px] px-[32px] h-[257px] flex flex-col justify-center items-center">
                             <?php if (!empty($category['icon']['url'])): ?>
                                 <img src="<?php echo esc_url($category['icon']['url']); ?>" width="45">
                             <?php endif; ?>
@@ -83,8 +83,8 @@ if ($solution_how_it_use):
             <div class="!w-[100%] md:!w-[458px] mb-[40px] ">
                 <?php if (!empty($solution_page_heading)): ?>
                     <h1
-                        class="font-montserrat uppercase text-[24px] md:text-[32px] font-bold tracking-[3.6px] mt-[10px] mb-[24px]">
-                        <?php echo esc_html($solution_page_heading); ?>
+                        class="font-montserrat uppercase text-[24px] md:text-[32px] md:leading-[40px] font-bold tracking-[3.6px] mt-[10px] mb-[24px]">
+                        <?php echo esc_html($how_it_use_heading); ?>
                     </h1>
                 <?php endif; ?>
                 <?php if (!empty($how_it_use_description)): ?>
@@ -94,16 +94,16 @@ if ($solution_how_it_use):
                 <?php endif; ?>
             </div>
             <?php if($how_it_use_all){ ?>
-            <div class="usedall grid grid-col-1 lg:grid-cols-2 gap-[20px]">
+            <div class="solution_overlay usedall grid grid-col-1 lg:grid-cols-2 gap-[20px]">
                 <?php foreach ($how_it_use_all as $uses): ?>
-                    <div class="used">
+                    <div class="used relative">
                         <?php if (!empty($uses['image'])): ?>
-                            <img src="<?php echo esc_url(wp_get_attachment_image_url($uses['image'], 'full')); ?>" height="388"
-                                class="rounded-t-[20px] w-full">
+                            <img src="<?php echo esc_url(wp_get_attachment_image_url($uses['image'], 'full')); ?>"
+                                class="h-[388px] rounded-t-[20px] w-full object-cover">
                         <?php endif; ?>
 
                         <div
-                            class="bg-white rounded-[20px] px-[10px]  md:px-[32px] py-[20px] md:py-[40px] flex flex-col justify-center items-start">
+                            class="bg-white rounded-b-[20px] px-[10px]  md:px-[32px] py-[20px] md:py-[40px] flex flex-col justify-center items-start">
                             <?php if (!empty($uses['heading'])): ?>
                                 <h1
                                     class="uppercase text-center roboto  text-[20px] md:text-[24px] leading-[32px] font-bold tracking-[1px]  mb-[20px]">
@@ -111,7 +111,7 @@ if ($solution_how_it_use):
                                 </h1>
                             <?php endif; ?>
                             <?php if (!empty($uses['description'])): ?>
-                                <p class="roboto text-[14px] text-[#05060F] font-normal text-left text-black tracking-[0.84px]">
+                                <p class="roboto text-[14px] text-[#05060F] leading-[20px] font-normal text-left text-black tracking-[0.84px]">
                                     <?php echo esc_html($uses['description']); ?>
                                 </p>
                             <?php endif; ?>
@@ -135,7 +135,7 @@ if ($solution_benefit):
     <section class="pb-[50px] md:pb-[70px]">
         <div class="container mx-auto px-4">
             <div class="about_us">
-                <div class="mb-[24px] w-[100%] md:w-[520px]">
+                <div class="mb-[40px] w-[100%] md:w-[520px]">
                     <?php if (!empty($benefit_heading)): ?>
                         <h1
                             class="font-montserrat uppercase text-[#05060F] text-[20px] md:text-[32px] leading-[20px] md:leading-[40px] font-bold tracking-[3.8px] mb-[24px]">
@@ -143,7 +143,7 @@ if ($solution_benefit):
                         </h1>
                     <?php endif; ?>
                     <?php if (!empty($benefit_description)): ?>
-                        <p class="roboto [14px] text-[#05060F]">
+                        <p class="roboto text-[14px] text-[#05060F] leading-[20px]">
                             <?php echo esc_html($benefit_description); ?>
                         </p>
                     <?php endif; ?>

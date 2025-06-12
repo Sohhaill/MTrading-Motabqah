@@ -70,13 +70,13 @@ if ($jobs_query->have_posts()):
                                     Requirements
                                 </p>
                                 <div
-                                    class="roboto text-[14px] text-[#000000] font-normal text-left text-black tracking-[0.84px]">
+                                    class="custom-ul-ol list-disc roboto text-[14px] text-[#000000] font-normal text-left text-black tracking-[0.84px]">
                                     <?php echo $job_requirements; ?>
                                 </div>
                             </div>
                         </div>
-                        <a href="<?php echo $job_apply_url; ?>"
-                            class="roboto hover:bg-[var(--button-bg-red)] text-center mt-[20px] block  w-[130px] md:w-[195px] md:h-[56px] py-[16px] leading-[26px] bg-[#323334] rounded-[10px] roboto uppercase text-[14px] text-white font-bold tracking-[1.2px] shadow-lg">
+                        <a href=""
+                            class="apply_now_btn roboto hover:bg-[var(--button-bg-red)] text-center mt-[20px] block  w-[130px] md:w-[195px] md:h-[56px] py-[16px] leading-[26px] bg-[#323334] rounded-[10px] roboto uppercase text-[14px] text-white font-bold tracking-[1.2px] shadow-lg">
                             Apply
                         </a>
                     </div>
